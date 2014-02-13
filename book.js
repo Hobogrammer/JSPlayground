@@ -13,7 +13,7 @@ Book.prototype.toString = function () {
 var BookList = (function() {
   var books = []
 
-  return { //if this isn't here I get weird errors
+  return {
     addToList:function(book) {
       books.push(book)
     },
@@ -30,5 +30,12 @@ var BookList = (function() {
     }
   };
 })();
+
 myBook = new Book("Ginga Eiyuu Densetsu","Yoshiki Tanaka", true, 500, 51);
+mySecondBook = new Book("Sekai no Moushou", "Hiroyuki Morioka", false, 269, 0);
 BookList.addToList(myBook);
+console.log(BookList.getCurrentPage(myBook));
+BookList.addToList(mySecondBook);
+console.log(BookList.incrementPage(myBook));
+myBook.toString();
+mySecondBook.toString();
