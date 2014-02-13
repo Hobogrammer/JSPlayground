@@ -25,7 +25,7 @@ var BookList = (function() {
       return book.currentPage;
     },
     decrementPage:function(book) {
-      book.currentPage -+ 1;
+      book.currentPage -= 1;
       return book.currentPage;
     }
   };
@@ -37,5 +37,7 @@ BookList.addToList(myBook);
 console.log(BookList.getCurrentPage(myBook));
 BookList.addToList(mySecondBook);
 console.log(BookList.incrementPage(myBook));
+myBook.toString();
+console.log(BookList.decrementPage(myBook));
 myBook.toString();
 mySecondBook.toString();
